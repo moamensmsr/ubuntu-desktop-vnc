@@ -17,7 +17,8 @@ jobs:
           xrdb $HOME/.Xresources
           startxfce4 &" > ~/.vnc/xstartup
           chmod +x ~/.vnc/xstartup
-          echo "Malik168##" | vncpasswd -f > ~/.vnc/passwd
+          # تعيين كلمة المرور مع دعم الرموز الخاصة
+          echo -e "Malik168##\nMalik168##\n\n" | vncpasswd
           chmod 600 ~/.vnc/passwd
           vncserver :1 -geometry 1280x720 -depth 24
 
